@@ -6,7 +6,7 @@ class TaskShema(BaseModel):
     id: int | None = None
     name: str | None = None
     pomodoro_count: int | None = None
-    category_id: int
+    category_id: int | None = None
 
     class Config:
         from_attributes = True

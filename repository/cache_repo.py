@@ -1,7 +1,7 @@
 import json
 
 from redis import Redis
-from schema.task import TaskShema
+from schema import TaskShema
 
 class CacheTask:
     def __init__(self, redis_: Redis):

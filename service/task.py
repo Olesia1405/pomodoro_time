@@ -1,5 +1,5 @@
 from repository import TaskRepository, CacheTask
-from schema.task import TaskShema
+from schema import TaskShema
 from dataclasses import dataclass
 
 
@@ -8,7 +8,7 @@ class TaskService:
     task_repo: TaskRepository
     task_cache: CacheTask
 
-    def get_tasks(self):
+    def get_tasks(self) -> list[TaskShema]:
         if cache_task := self.task_cache.get_task():
             return cache_task
         else:

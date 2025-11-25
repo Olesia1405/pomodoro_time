@@ -3,7 +3,7 @@ from fastapi import APIRouter, status
 from fastapi.params import Depends
 
 from service import TaskService
-from schema.task import TaskShema
+from schema import TaskShema
 from repository import TaskRepository, CacheTask
 from dependency import get_task_repository, get_task_service
 
